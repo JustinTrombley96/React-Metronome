@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styling/Metronome.css';
 import click1 from '../sounds/click1.wav';
 import click2 from '../sounds/click2.wav';
-import { Button, Tooltip } from 'shards-react';
+import { Button } from 'shards-react';
 
 class Metronome extends Component {
 	constructor(props) {

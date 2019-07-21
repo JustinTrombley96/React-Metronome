@@ -8,8 +8,6 @@ import Card from './components/Card'
 
 ReactDOM.render(
     <>
-        <Metronome />
         <Card />
-        {/* <ToolTip /> */}
     </>
     , document.getElementById('root'));
