@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './Metronome.css';
-import click1 from './click1.wav';
-import click2 from './click2.wav';
+import '../styling/Metronome.css';
+import click1 from '../sounds/click1.wav';
+import click2 from '../sounds/click2.wav';
+import { Button, Tooltip } from 'shards-react';
 
 class Metronome extends Component {
 	constructor(props) {
@@ -83,7 +84,9 @@ class Metronome extends Component {
 					<div>{bpm} BPM</div>
 					<input type='range' min='60' max='240' value={bpm} onChange={this.handleBpmChange} />
 				</div>
-				<button onClick={this.startStop}>{playing ? 'Stop' : 'Start'}</button>
+				<Button pill theme='success' size='lg' onClick={this.startStop}>
+					{playing ? 'Stop' : 'Start'}
+				</Button>
 			</div>
 		);
 	}
