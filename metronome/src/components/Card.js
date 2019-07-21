@@ -1,14 +1,22 @@
 import React from 'react';
-import { Card, CardTitle, CardImg, CardBody } from 'shards-react';
-
+import { Card, CardTitle, CardImg, CardBody, CardHeader } from 'shards-react';
 import TooltipButton from './ToolTip';
 import Metronome from './Metronome';
+import DarkMode from './DarkMode';
+import '../styling/Card.css';
 
-export default function BasicCard() {
+const BasicCard = () => {
 	return (
-		<Card style={{ maxWidth: '400px',  }}>
-			<CardImg src='https://cdn.pixabay.com/photo/2010/12/13/10/11/box-2451_960_720.jpg' width='400' height="530px" />
-			<CardBody>
+		<Card className='card' style={{ maxWidth: '400px' }}>
+			<CardHeader className='cardHeader'>
+				<DarkMode />
+			</CardHeader>
+			<CardImg
+				src='https://cdn.pixabay.com/photo/2010/12/13/10/11/box-2451_960_720.jpg'
+				width='400'
+				height='530px'
+			/>
+			<CardBody className='cardBody'>
 				<CardTitle>Metronome</CardTitle>
 				<Metronome />
 				<TooltipButton />
@@ -16,4 +24,5 @@ export default function BasicCard() {
 			{/* <CardFooter>Card Footer</CardFooter> */}
 		</Card>
 	);
-}
+};
+export default BasicCard;
